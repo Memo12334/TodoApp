@@ -1,0 +1,43 @@
+@use "../utils/colors" as color;
+
+.task-list {
+  margin-top: 20px;
+  background-color: color.$Dark_VeryDarkDesaturatedBlue;
+}
+
+.task-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 0.9rem;
+  border-bottom: 1px solid color.$Dark_DarkGrayishBlue;
+  padding: 15px 0;
+  gap: 10px;
+
+  &.task-check {
+    text-decoration: line-through;
+  }
+
+  .task-cross {
+    position: absolute;
+    cursor: pointer;
+    right: 50px;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid color.$Dark_DarkGrayishBlue;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+
+    &.task-check {
+      background-color: green;
+    }
+  }
+}
